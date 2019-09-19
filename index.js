@@ -8,5 +8,9 @@ const { commandLineOptionsDefinition } = require('./src/constants')
 
 const options = commandLineArgs(commandLineOptionsDefinition)
 
-app(login (fetch), badger (fetch)) (options)
+const login = login (fetch) 
+const badger = badger (fetch)
+
+app(login, badger) (options)
     .then (state => { console.log(state) })
+    .catch (error => console.log(error))
