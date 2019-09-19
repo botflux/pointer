@@ -16,7 +16,7 @@ describe ('#login', () => {
         done()
     })
 
-    it ('calls fetch my the body', async done => {
+    it ('calls fetch with the body', async done => {
         const json = jest.fn(() => Promise.resolve({}))
         const fakeFetch = jest.fn(() => Promise.resolve({ json }))
 
